@@ -1,5 +1,8 @@
 Revision history for Perl extension Crypt::GeneratePassword.
 
+0.03  Tue Sep 09 15:33:01 2003
+        - added a custom RNG hook
+
 0.02  Fri Sep 13 10:57:32 2002
         - fixed minor bug causing problems with perl 5.005
 

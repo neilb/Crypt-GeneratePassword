@@ -11,6 +11,7 @@ Crypt::GeneratePassword - generate secure random pronounceable passwords
   $word = word($minlen,$maxlen);
   $word = chars($minlen,$maxlen);
   *Crypt::GeneratePassword::restrict = \&my_restriction_filter;
+  *Crypt::GeneratePassword::random_number = \&my_random_number_generator;
 
 =head1 DESCRIPTION
 
@@ -80,7 +81,7 @@ sub chars($$;$@) {
   my $res;
   my $diff = $maxlen-$minlen;
   WORD: {
-    $res = join '', map { $$set[rand(@$set)] } 1..$maxlen;
+    $res = join '', map { $$set[random_number(scalar(@$set))] } 1..$maxlen;
     $res =~ s/\x00{0,$diff}$//;
     redo if $res =~ m/\x00/;
     for (my $i = 0; $i < @restrict; $i+=2) {
@@ -373,6 +374,27 @@ sub load_language($$;$) {
   $default_language = $name if $default;
 }
 
+=head2 random_number
+
+  $number = random_number($limit);
+
+Returns a random integer between 0 (inclusive) and $limit (exclusive).
+Change this to a function of your choice by doing something like this:
+
+    {
+      local $^W; # squelch sub redef warning.
+      *Crypt::GeneratePassword::random_number = \&my_rng;
+    }
+
+The default implementation uses perl's rand(), which might not be
+appropriate for some sites.
+
+=cut
+
+sub random_number($) {
+  return int(rand()*$_[0]);
+}
+
 =head2 restrict
 
   $forbidden = restrict($word,$language);
@@ -399,11 +421,11 @@ sub restrict($$) {
 
 =head1 VERSION
 
-This document describes version 0.02
+This document describes version 0.03
 
 =cut
 
-$Crypt::GeneratePassword::VERSION = 0.02;
+$Crypt::GeneratePassword::VERSION = 0.03;
 
 =head1 AUTHOR
 
