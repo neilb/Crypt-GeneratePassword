@@ -274,7 +274,7 @@ sub generate_language($@) {
     $wordlist = [ split(/\s+/,$wordlist) ];
     if (@$wordlist == 1) {
       local *FH;
-      open(FH,'<',$$wordlist[0]);
+      open(FH,'<'.$$wordlist[0]);
       $wordlist = [ <FH> ];
       close(FH);
     }
@@ -399,11 +399,11 @@ sub restrict($$) {
 
 =head1 VERSION
 
-This document describes version 0.01
+This document describes version 0.02
 
 =cut
 
-$Crypt::GeneratePassword::VERSION = 0.01;
+$Crypt::GeneratePassword::VERSION = 0.02;
 
 =head1 AUTHOR
 
