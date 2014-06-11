@@ -1,11 +1,14 @@
-Revision history for Perl extension Crypt::GeneratePassword.
+Revision history for Perl module Crypt::GeneratePassword
 
-0.03  Tue Sep 09 15:33:01 2003
-        - added a custom RNG hook
+0.04 2014-06-12 NEILB
+    - Reformatted this file as per CPAN::Changes::Spec
 
-0.02  Fri Sep 13 10:57:32 2002
-        - fixed minor bug causing problems with perl 5.005
+0.03 2003-09-09 JWALT
+    - added a custom RNG hook
 
-0.01  Tue Sep  3 14:15:57 2002
-	- initial revision
+0.02 2002-09-13 JWALT
+    - fixed minor bug causing problems with perl 5.005
+
+0.01 2002-09-03 JWALT
+    - initial revision
 
