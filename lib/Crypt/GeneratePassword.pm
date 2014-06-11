@@ -100,8 +100,8 @@ sub chars($$;$@) {
 
 =head2 word
 
-  $word = word($minlen, $maxlen [, $lang [, $signs [, $caps [, $minfreq, $avgfreq ] ] ] );
-  $word = word3($minlen, $maxlen [, $lang [, $signs [, $caps [, $minfreq, $avgfreq ] ] ] );
+  $word = word($minlen, $maxlen [, $lang [, $numbers [, $caps [, $minfreq, $avgfreq ] ] ] );
+  $word = word3($minlen, $maxlen [, $lang [, $numbers [, $caps [, $minfreq, $avgfreq ] ] ] );
 
 Generates a random pronounceable word. The length of the returned
 word will be between $minlen and $maxlen. If you supply a non-zero

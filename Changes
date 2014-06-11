@@ -1,6 +1,8 @@
 Revision history for Perl module Crypt::GeneratePassword
 
 0.04 2014-06-12 NEILB
+    - Fixed mistake in doc for word() and word3()
+      Thanks to Smylers for RT#11787.
     - Switched to Dist::Zilla
     - Reformatted this file as per CPAN::Changes::Spec
     - Moved test.pl to t/01-require.t and simplified it
