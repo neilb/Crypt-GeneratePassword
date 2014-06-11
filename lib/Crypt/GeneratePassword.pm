@@ -1,5 +1,7 @@
 package Crypt::GeneratePassword;
 
+# ABSTRACT: generate secure random pronounceable passwords
+
 use 5.006;
 use strict;
 use warnings;
@@ -434,6 +436,10 @@ sub restrict($$) {
 =head1 SEE ALSO
 
 L<Crypt::RandPasswd>
+
+=head1 REPOSITORY
+
+L<https://github.com/neilbowers/Crypt-GeneratePassword>
 
 =head1 AUTHOR
 
