@@ -1,6 +1,7 @@
 Revision history for Perl module Crypt::GeneratePassword
 
 0.04 2014-06-12 NEILB
+    - Switched to Dist::Zilla
     - Reformatted this file as per CPAN::Changes::Spec
     - Moved test.pl to t/01-require.t and simplified it
 

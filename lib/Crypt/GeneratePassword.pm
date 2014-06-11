@@ -1,5 +1,10 @@
 package Crypt::GeneratePassword;
+
+use 5.006;
 use strict;
+use warnings;
+
+=encoding utf-8
 
 =head1 NAME
 
@@ -43,9 +48,9 @@ computer speed has improved a little since 1977.
 =cut
 
 require Exporter;
-@Crypt::GeneratePassword::ISA = ('Exporter');
-@Crypt::GeneratePassword::EXPORT_OK = qw(word word3 analyze analyze3 chars generate_language load_language);
-%Crypt::GeneratePassword::EXPORT_TAGS = ( 'all' => [ @Crypt::GeneratePassword::EXPORT_OK ] );
+our @ISA         = ('Exporter');
+our @EXPORT_OK   = qw(word word3 analyze analyze3 chars generate_language load_language);
+our %EXPORT_TAGS = ( 'all' => [ @Crypt::GeneratePassword::EXPORT_OK ] );
 
 my $default_language = 'en';
 use vars qw(%languages);
@@ -330,6 +335,7 @@ sub generate_language($@) {
 
   {
     require Data::Dumper;
+    no warnings 'once';
     local $Data::Dumper::Indent = 0;
     local $Data::Dumper::Purity = 0;
     local $Data::Dumper::Pad = '';
@@ -419,17 +425,13 @@ sub restrict($$) {
   return ($_[0] =~ m/f.ck|ass|rsch|tit|cum|ack|asm|orn|eil|otz|oes/i);
 }
 
-=head1 VERSION
+=head1 SEE ALSO
 
-This document describes version 0.03
-
-=cut
-
-$Crypt::GeneratePassword::VERSION = 0.03;
+L<Crypt::RandPasswd>
 
 =head1 AUTHOR
 
-Copyright 2002 by Jörg Walter <jwalt@cpan.org>,
+Copyright 2002 by JÃ¶rg Walter <jwalt@cpan.org>,
 inspired by ideas from Tom Van Vleck and Morris
 Gasser/FIPS-181.
 
@@ -438,9 +440,5 @@ Gasser/FIPS-181.
 This perl module is free software; it may be redistributed and/or modified
 under the same terms as Perl itself.
 
-
-=head1 SEE ALSO
-
-L<Crypt::RandPasswd>.
 
 =cut
