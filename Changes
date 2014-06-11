@@ -1,6 +1,8 @@
 Revision history for Perl module Crypt::GeneratePassword
 
 0.04 2014-06-12 NEILB
+    - Fixed bug that would occasionally generate a division by zero
+      in word() and word3(). RT#42832
     - Fixed mistake in doc for word() and word3()
       Thanks to Smylers for RT#11787.
     - Switched to Dist::Zilla
