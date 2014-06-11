@@ -11,6 +11,8 @@ Revision history for Perl module Crypt::GeneratePassword
     - Added real tests for chars(), word() and word3()
     - Added github repo to pod
     - Added package statement and use strict & warnings in ::de and ::en
+    - Tell dzil that the language model modules are binary, so they won't
+      be parsed with PPI, which takes 5+ minutes on my laptop.
 
 0.03 2003-09-09 JWALT
     - added a custom RNG hook
