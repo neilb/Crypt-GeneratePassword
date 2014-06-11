@@ -8,6 +8,7 @@ Revision history for Perl module Crypt::GeneratePassword
     - Switched to Dist::Zilla
     - Reformatted this file as per CPAN::Changes::Spec
     - Moved test.pl to t/01-require.t and simplified it
+    - Added real tests for chars(), word() and word3()
 
 0.03 2003-09-09 JWALT
     - added a custom RNG hook
