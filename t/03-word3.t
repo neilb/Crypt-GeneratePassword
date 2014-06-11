@@ -7,7 +7,7 @@ use warnings;
 my $min = 10;
 my $max = 14;
 
-use Test::More 0.88 tests => 10;
+use Test::More 0.88 tests => 2;
 use Crypt::GeneratePassword qw/ word3 /;
 
 for (1 .. 2) {
