@@ -10,6 +10,7 @@ Revision history for Perl module Crypt::GeneratePassword
     - Moved test.pl to t/01-require.t and simplified it
     - Added real tests for chars(), word() and word3()
     - Added github repo to pod
+    - Added package statement and use strict & warnings in ::de and ::en
 
 0.03 2003-09-09 JWALT
     - added a custom RNG hook
