@@ -392,16 +392,21 @@ sub load_language($$;$) {
 
   $number = random_number($limit);
 
-Returns a random integer between 0 (inclusive) and $limit (exclusive).
+Returns a random integer between 0 (inclusive) and C<$limit> (exclusive).
 Change this to a function of your choice by doing something like this:
 
+    sub my_rng ($) {
+        ...
+    }
+
     {
-      local $^W; # squelch sub redef warning.
+      # suppress warning about function being redefined
+      no warnings 'redefine';
       *Crypt::GeneratePassword::random_number = \&my_rng;
     }
 
-The default implementation uses perl's rand(), which might not be
-appropriate for some sites.
+The default implementation uses perl's rand(),
+which might not be appropriate for some sites.
 
 =cut
 
@@ -417,8 +422,12 @@ Filters undesirable words. Returns false if the $word is allowed
 in language $lang, false otherwise. Change this to a function of
 your choice by doing something like this:
 
+    sub my_filter ($$) {
+        ...
+    }
+
     {
-      local $^W; # squelch sub redef warning.
+      no warnings 'redefine';
       *Crypt::GeneratePassword::restrict = \&my_filter;
     }
 
