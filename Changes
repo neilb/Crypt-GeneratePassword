@@ -2,6 +2,7 @@ Revision history for Perl module Crypt::GeneratePassword
 
 0.05 2015-11-14 NEILB
     - Updated github repo URL after changing my github username
+    - Added [MetaJSON] to dist.ini so META.json is included in releases
 
 0.04 2014-06-12 NEILB
     - Fixed bug that would occasionally generate a division by zero
