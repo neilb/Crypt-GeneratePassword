@@ -4,6 +4,7 @@ Revision history for Perl module Crypt::GeneratePassword
     - Updated github repo URL after changing my github username
     - Added [MetaJSON] to dist.ini so META.json is included in releases
     - Doc: changed usage of "local $^W" to "no warnings 'redefine'"
+    - Fixed a couple of typos in the doc
 
 0.04 2014-06-12 NEILB
     - Fixed bug that would occasionally generate a division by zero

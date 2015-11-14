@@ -62,7 +62,7 @@ use vars qw(%languages);
 
   $word = chars($minlen, $maxlen [, $set [, $characters, $maxcount ] ... ] );
 
-Generatess a completely random word between $minlen and $maxlen in length.
+Generates a completely random word between $minlen and $maxlen in length.
 If $set is given, it must be an array ref of characters to use. You can
 restrict occurrence of some characters by providing ($characters, $maxcount)
 pairs, as many as you like. $characters must be a string consisting of those
@@ -370,7 +370,7 @@ sub generate_language($@) {
   load_language($language_description, $name [, $default]);
 
 Loads a language description which is then available in words().
-$language_desription is a string returned by generate_language,
+$language_description is a string returned by generate_language,
 $name is a name of your choice which is used to select this
 language as the fifth parameter of words(). You should use the
 well-known ISO two letter language codes if possible, for best
