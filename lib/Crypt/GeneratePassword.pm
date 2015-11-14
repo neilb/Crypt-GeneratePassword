@@ -55,8 +55,7 @@ our @EXPORT_OK   = qw(word word3 analyze analyze3 chars generate_language load_l
 our %EXPORT_TAGS = ( 'all' => [ @Crypt::GeneratePassword::EXPORT_OK ] );
 
 my $default_language = 'en';
-use vars qw(%languages);
-%languages = ();
+our %languages = ();
 
 =head2 chars
 
@@ -125,7 +124,7 @@ values are around 0.05 for trigrams (word3) and 0.001 for quadgrams (word).
 
 =cut
 
-use vars qw($total);
+our $total;
 
 sub word($$;$$$$$)
 {
@@ -465,3 +464,5 @@ under the same terms as Perl itself.
 
 
 =cut
+
+1;

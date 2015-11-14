@@ -5,6 +5,9 @@ Revision history for Perl module Crypt::GeneratePassword
     - Added [MetaJSON] to dist.ini so META.json is included in releases
     - Doc: changed usage of "local $^W" to "no warnings 'redefine'"
     - Fixed a couple of typos in the doc
+    - Dropped usage of "use vars"
+    - Module didn't have the required final "1;" or equivalent.
+      Was only by luck it had been.
 
 0.04 2014-06-12 NEILB
     - Fixed bug that would occasionally generate a division by zero
