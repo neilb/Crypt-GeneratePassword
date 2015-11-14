@@ -456,6 +456,8 @@ Copyright 2002 by Jörg Walter <jwalt@cpan.org>,
 inspired by ideas from Tom Van Vleck and Morris
 Gasser/FIPS-181.
 
+Now maintained by Neil Bowers E<lt>neilb@cpan.orgE<gt>
+
 =head1 COPYRIGHT
 
 This perl module is free software; it may be redistributed and/or modified
