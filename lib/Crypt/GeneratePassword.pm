@@ -439,7 +439,7 @@ L<Crypt::RandPasswd>
 
 =head1 REPOSITORY
 
-L<https://github.com/neilbowers/Crypt-GeneratePassword>
+L<https://github.com/neilb/Crypt-GeneratePassword>
 
 =head1 AUTHOR
 
